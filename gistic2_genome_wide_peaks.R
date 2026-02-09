@@ -331,7 +331,7 @@ plot_gistic_scores <- function(scores_data, chr_map, peaks = NULL,
   
   # Create chromosome marking bars - SHORT BARS near x-axis
   chr_shading <- chr_map
-  chr_shading$fill <- ifelse(chr_shading$Chromosome %% 2 == 0, "black", "white")
+  chr_shading$fill <- ifelse(chr_shading$Chromosome %% 2 == 0, "black", "gray")
   
   # Bar height as percentage of total plot height
   bar_height <- y_range * 0.08  # 8% of plot height
@@ -359,7 +359,7 @@ plot_gistic_scores <- function(scores_data, chr_map, peaks = NULL,
                  color = "#4393C3", size = 0.4, alpha = 0.8) +
     
     # Add THICK horizontal line at 0
-    geom_hline(yintercept = 0, color = "black", size = 1.5) +
+    geom_hline(yintercept = 0, color = "black", size = 0.7) +
     
     # Add chromosome labels on x-axis
     scale_x_continuous(
@@ -524,3 +524,4 @@ cat("✓ Plots saved successfully!\n")
 cat("Check:", output_dir, "\n")
 
 cat("========================================\n")
+
