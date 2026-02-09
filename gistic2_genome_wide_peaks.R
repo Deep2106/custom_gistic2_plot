@@ -23,8 +23,8 @@ pacman::p_load(
 # =============================================================================
 
 # Set your GISTIC2 output directories
-bm_dir <- "~/RCSI_2025_JOB/clinical_bioinformatician/Literature/catherine/WES_SEG/Copy Number SEG files/COHORT/BM_results/"
-emd_dir <- "~/RCSI_2025_JOB/clinical_bioinformatician/Literature/catherine/WES_SEG/Copy Number SEG files/COHORT/EMD_results/"
+bm_dir <- "BM_results/"
+emd_dir <- "EMD_results/"
 
 # File paths
 bm_scores_file <- paste0(bm_dir, "scores.gistic")
@@ -37,7 +37,7 @@ emd_amp_genes <- paste0(emd_dir, "amp_genes.conf_90.txt")
 emd_del_genes <- paste0(emd_dir, "del_genes.conf_90.txt")
 
 # Output directory
-output_dir <- "~/RCSI_2025_JOB/clinical_bioinformatician/Literature/catherine/WES_SEG/Copy Number SEG files/Results/"
+output_dir <- "Results/"
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 # =============================================================================
@@ -75,7 +75,7 @@ read_gistic_scores <- function(scores_file) {
 }
 
 # =============================================================================
-# FUNCTION 2: Create Chromosome Map (hg38/GRCh38)
+# FUNCTION 2: Create Chromosome Map (hg38/GRCh38) # if you are using grch37 change boundaries accordingly.
 # =============================================================================
 
 create_chromosome_map <- function() {
@@ -522,4 +522,5 @@ dev.off()
 cat("\n========================================\n")
 cat("✓ Plots saved successfully!\n")
 cat("Check:", output_dir, "\n")
+
 cat("========================================\n")
