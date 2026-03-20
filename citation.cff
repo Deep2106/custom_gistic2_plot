@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this scripts, please cite it as below."
+authors:
+- family-names: "Bharti"
+  given-names: "Deepak"
+  orcid: "https://orcid.org/0000-0002-4186-4038"
+title: "SCustom_gistic2_plots"
+version: 1.0.0
+date-released: 2026-02-01
+url: "https://github.com/Deep2106/custom_gistic2_plot"
